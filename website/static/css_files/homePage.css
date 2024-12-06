@@ -1,0 +1,371 @@
+/* PAGE SPECIFIC STYLE */
+
+/* Main content */
+.main-content {
+    margin-left: 170px;
+    padding: 16px;
+    transition: margin-left 0.3s;
+}
+
+/* Main content when side panel is closed */
+.main-content.expanded {
+    margin-left: 0;
+}
+
+.text-content {
+    position: absolute; /* Use absolute to cover the background image */
+    top: 90px;
+    left: 80px;
+    right: 490px;
+    bottom: 350px; /* Fill the entire area */
+    
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent background over the image */
+    padding: 50px; /* Add padding for inner spacing */
+    color: #333; /* Dark text for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Center the content vertically */
+    align-items: normal; /* Center the content horizontally */
+    
+    /* Ensure text readability */
+    font-size: 1rem;
+    line-height: 1;
+    text-align: start; /* Center-align the text */
+    /* z-index: 2; /* Ensure it's above the image */
+    letter-spacing: 0.5px;
+    
+    /* Rounded corners and shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    
+    /* Smooth transitions */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* .text-content:hover {
+    transform: scale(1.02); /* Slight zoom on hover 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add more shadow on hover 
+} */
+
+
+
+/* Menu button when the panel is closed */
+.text-content.expanded {
+    margin-left: 50px /* Moves with the side panel */
+}
+
+/* Menu button when the panel is open */
+.text-content.collapsed {
+    margin-left: 100px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Use Lobster for headings */
+    text-align: start; /* Centered headings */
+    color: #5d616a; /* Custom color for headings */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Use Lobster for headings */
+    text-align: start; /* Centered headings */
+    color: #676969; /* Custom color for headings */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+p {
+    margin: 20px 8px; /* Add margin for paragraphs */
+    text-align: start; /* Justify text for a cleaner look */
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    /* font-weight: 600; */
+}
+
+/* Image styles */
+.background-image {
+    position: absolute; /* Position absolute to fill the parent */
+    top: 90px;
+    left: 600px;
+    right: 0;
+    width: 28%;
+    height: 43%;
+    object-fit: fill; /* Cover the entire area */
+    margin-left: 350px;
+    z-index: 1; /* Send to back */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 12px; /* Smooth rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}
+
+.background-image:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Increase shadow intensity on hover */
+}
+
+.company-details {
+    background-color: #f2f25d; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    padding: 40px 20px;
+    margin-top: 800px;
+    text-align: left;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+    border-top: 1px solid #ddd; /* Subtle border at the top */
+
+    background:  linear-gradient(180deg, #f2f2a6, #efef61); /* Gradient for a more dynamic look */
+    border-radius: 5px;
+    position:absolute;
+    top:300px
+}
+
+.company-details h2, .company-details h3 {
+    color: #5d616a;
+    margin-bottom: 15px;
+}
+
+.company-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.company-details p a {
+    color: #007acc; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.company-details p a:hover {
+    color: #005b99; /* Darker link color on hover */
+}
+
+.demo-button-container {
+    margin-top: 75px; /* Space above the demo button */
+    /* margin-right: 500px;
+    margin-left: 0; */
+    position: absolute; /* Use absolute to cover the background image */
+    top: 200px;
+    left: 55px;
+    right: 490px;
+    bottom: 0;
+}
+
+.demo-button {
+    background-color: #f2f26e;; /* Button background color */
+    color:  rgb(90, 89, 89); /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Font size */
+    font-weight: 600;
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    position: relative;
+    background:  linear-gradient(180deg, #f2f2a6, #efef61); /* Gradient for a more dynamic look */
+}
+
+.demo-button:hover {
+    transform: translateY(-2px); /* Move button slightly up on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth on hover */
+}
+
+.demo-button .material-symbols-outlined {
+    font-size: 16px; /* Size of the arrow icon */
+    margin-left: 5px; /* Space between text and icon */
+    transition: transform 0.3s ease; /* Transition for arrow movement */
+}
+
+.demo-button:hover .material-symbols-outlined {
+    transform: translateX(3px); /* Move the arrow slightly to the right on hover */
+}
+
+/* .text-overlay {
+    position: relative; /* Position relative to overlay on image 
+    z-index: 2; /* Bring text above image
+    padding: 10px; /* Space around text 
+    color: white; /* White text for contrast
+    text-align: start; /* Center text
+} */
+
+.services-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Padding around the section */
+    margin-top: 160px; /* Space above the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: absolute; 
+    top: 300px;
+    left: 80px;
+    right: 10px; 
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if there are too many services for one row */
+    gap: 25px; /* Space between each service */
+    padding: 20px;
+}
+
+.service-intro {
+    /* position: absolute; /* Use absolute to cover the background image */
+    /* top: 90px;
+    left: 80px;
+    right: 490px; */
+   /* bottom: 350px; /* Fill the entire area */
+    
+    /*background: rgba(255, 255, 255, 0.6); /* Semi-transparent background over the image */
+    padding: 1px; /* Add padding for inner spacing */
+    /*color: #333; /* Dark text for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Center the content vertically */
+    align-items: normal; /* Center the content horizontally */
+    
+    /* Ensure text readability */
+    font-size: 1rem;
+    line-height: 1;
+    text-align: start; /* Center-align the text */
+    letter-spacing: 0.5px;
+}
+
+
+.services-section h2 {
+    text-align: start; /* Center the section heading */
+    color: #5d616a; /* Heading color */
+    margin-bottom: 2px; /* Space below the heading */
+    margin-left: 30px;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 0.5;
+}
+
+.services-section p {
+    text-align: start;
+    color: #666; /* Color for service description */
+    margin-bottom: 0;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    margin-right:400px;
+}
+
+.service-section-image {
+    width: 10%; /* Set the width of the image */
+    height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: text-bottom; /* Align the image with the text */
+    margin-left: 350px; /* Space between text and image */
+    display: inline-block; /* Ensure it displays inline with the text */
+
+    position: absolute; 
+    top: 55px;
+    left: 650px;
+    right: 0; 
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 50px; /* Smooth rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}
+
+.service-section-image:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increase shadow intensity on hover */
+}
+
+.service {
+    margin: 20px 0; /* Space between services */
+    padding: 10px; /* Padding for each service */
+    background-color: #ffffff; /* White background for services */
+   /* border-radius: 5px; Rounded corners for services
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow for services */
+    flex: 1 1 30%; /* Allow each service to take up 30% of the row, adjusting based on screen size */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Limit width for each service */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.service:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.service h3 {
+    color: #333; /* Color for service titles */
+    /*margin-bottom: 5px; /* Space below service title */
+    /* margin-left: 20px; */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.service p {
+    color: #666; /* Color for service description */
+    /* margin-left: 20px; */
+    text-align: match-parent; 
+    flex-direction: row;
+    margin: 5px; /* Ensure no extra margin between h3 and p */
+}
+
+.service-costAnalysis-image {
+    width: 35%; /* Set the width of the image */
+    height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: text-bottom; /* Align the image with the text */
+    margin-left: 115px; /* Space between text and image */
+    /*display: inline-block; /* Ensure it displays inline with the text */
+
+    /* position: absolute; 
+    top: 220px;
+    left: 0;
+    right: 0;  */
+    margin-bottom:2px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 100%; /* Smooth rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}
+
+.service-resourceOpt-image {
+    width: 45%; /* Set the width of the image */
+    height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: text-bottom; /* Align the image with the text */
+    margin-left: 100px; /* Space between text and image */
+    /*display: inline-block; /* Ensure it displays inline with the text */
+
+    /* position: absolute; 
+    top: 220px;
+    left: 0;
+    right: 0;  */
+    margin-bottom:2px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 100%; /* Smooth rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}
+
+.service-financialConsulting-image {
+    width: 25%; /* Set the width of the image */
+    height: 80%;
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: text-bottom; /* Align the image with the text */
+    margin-left: 122px; /* Space between text and image */
+    /*display: inline-block; /* Ensure it displays inline with the text */
+
+    /* position: absolute; 
+    top: 220px;
+    left: 0;
+    right: 0;  */
+    margin-bottom:2px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 60px; /* Smooth rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}

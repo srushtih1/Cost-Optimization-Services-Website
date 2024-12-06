@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700;600&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif; /* Use Open Sans for body */
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Line height for readability */
+    letter-spacing: 0.5px;
+    background-color: #f5f5f5; /* White background */
+    color: #333; /* Dark text for better legibility */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */ /* Slightly lighter text color */
+    /* padding-top: 70px; */
+}
+
+/* Side panel styling */
+.side-panel {
+    width: 0;
+    transition: 0.3s;
+    overflow: hidden; /* Hide content when collapsed */
+}
+
+.side-panel.opened {
+    height: 100%;
+    width: 140px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #efef61;
+    background: linear-gradient(180deg, #f2f2a6, #efef61);
+    padding-top: 15px;
+    transition: width 0.3s ease;
+    z-index: 10;
+    filter:none;
+
+    /* 3D shadow effect */
+    /* box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4), 0 2px 5px rgba(0, 0, 0, 0.2); */
+    /* border-right: 1px solid rgba(0, 0, 0, 0.2); */
+
+    /* Curved edges on the left side */
+    /* border-top-right-radius: 10px;  Top-left corner */
+    /* border-bottom-right-radius: 10px; Bottom-left corner */
+}
+
+.side-panel.closed {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    transition: width 0.3s ease;
+    overflow: hidden; /* Hide content when collapsed */
+}
+
+.side-panel .links-container {
+    margin-top: 60px;
+}
+
+
+.side-panel a {
+    position: relative;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    /* font-style: italic; */
+    color: rgb(90, 89, 89);
+    display: block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border-radius: 12px;
+}
+
+.side-panel a:hover {
+/* background-color: #e3eb68; /* Light background */
+    transform: translateY(-2px); /* slight up */
+    /*transform: scale(1.03); /* zooming up slightly */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+    color: #000; /* Darken text on hover for better contrast */
+}
+
+/* Icon style */
+.material-symbols-outlined {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+/* Hamburger menu button */
+.menu-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #b5b3b3;
+    color: white;
+    border: none;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+.menu-button:hover {
+    background-color: #7b7a7a;
+}
+
+/* Menu button when the panel is open */
+.menu-button.expanded {
+    left: 10px; /* Moves with the side panel */
+}
+
+/* Menu button when the panel is open */
+.menu-button.collapsed {
+    left: 5px; /* Moves with the side panel */
+}
+
+
+.top-panel {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background-color: #f0db6d; /* Light background color */
+    padding: 20px 770px; /* Padding around the panel
+    /* padding: 10px 20px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    /* left: 0;  
+    right: 0; 
+    bottom: 0; */
+
+    background: linear-gradient(90deg, #f2f2a6, #efef61);
+    /* background: linear-gradient(180deg, #fcfafa, #f7f7f6); */
+    /* background: linear-gradient(180deg, #f3f3c5, #f4f48b); */
+    /* transition: 0.1s; */
+    transition: none;
+    /* width: 100%; */
+
+    /* 3D shadow effect */
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+    /* Curved edges on the left side */
+    border-top-right-radius: 50px;  /* Top-left corner */
+    border-bottom-right-radius: 50px; /* Bottom-left corner */
+}
+
+.logo {
+    width:5%;
+    max-height: 70px; /* Limit the logo height */
+    margin-right: 15px; /* Space between logo and search bar */
+    position: absolute;
+    top:-2px;
+    left:155px;
+    padding: 11px; /* Add padding to give it some breathing room */
+/* background-color: #fff; /* Optional: background for clarity */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Soft shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    object-fit: contain; /* Maintain logo proportions */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.search-form {
+    display: flex; /* Use flexbox for alignment */
+    flex-grow: 1; /* Allow the search form to grow */
+    align-items: center;
+    /*position: relative; /* To position elements within */
+}
+
+.search-icon {
+    font-size: 24px;
+    color: #888;
+    position: absolute;
+    left: 292px; /* Position icon within the input */
+    pointer-events: none; /* So it doesn’t interfere with clicks in the input */
+    z-index:2;
+}
+
+.search-bar {
+    flex-grow: 1; /* Allow the search bar to take available space */
+    padding: 10px 150px; /* Padding inside the search bar */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 40px; /* Rounded corners */
+    margin-right: 300px; /* Space between search bar and button */
+    position: absolute;
+    left:280px;
+}
+
+.search-button {
+    padding: 10px 15px; /* Padding inside the button */
+    background-color: #b5b3b3; /* Button background color */
+    color:white;
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    /* background: linear-gradient(180deg, #f2f2a6, #efef61); */
+    /* background: linear-gradient(145deg, #f3f3c5, #f4f48b); */
+
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    /* position: relative; */
+    /*background:  linear-gradient(180deg, #f2f2a6, #efef61); /* Gradient for a more dynamic look */
+}
+
+.search-button:hover {
+    background-color: #7b7a7a; /* Darker shade on hover */
+    transform: translateY(-2px); /* slight up */
+    /*transform: scale(1.03); /* zooming up slightly */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+    /*color: #000; /* Darken text on hover for better contrast */
+}
+
+.services-popup {
+    display: none; /* Initially hidden */
+    position: fixed; /* Positioned relative to side panel */
+    top: 70px; /* Adjusted position below the services link */
+    left: 160px; /* Adjust based on layout */
+    background-color: #fff; /* Background color for the popup */
+    border: 1px solid #ddd; /* Subtle border for the popup */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    padding: 30px; /* Padding for the content */
+    z-index: 10; /* Keep it above other elements */
+    width: 600px; /* Adjusted width for better alignment */
+    filter:none;
+    /*box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+
+/* Create the triangle arrow using a pseudo-element */
+.services-popup::after {
+    content: ""; /* Empty content for the triangle */
+    position: absolute; /* Position it relative to the popup */
+    top: 85px; /* Adjust this to move the triangle up/down */
+    left: -10px; /* Adjust this to position it correctly */
+    border-width: 10px; /* Size of the triangle */
+    border-style: solid;
+    border-color: transparent #fff transparent transparent; /* Triangle color and orientation */
+    border-left-width: 0; /* Remove left border for a triangle */
+}
+.services-popup h3 {
+    margin: 0 0 15px; /* Margin below the heading */
+    font-size: 18px;
+    color: #8a8989; /* Dark color for better readability */
+}
+
+.services-popup ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 2px; /* Remove margin */
+}
+
+.services-popup li {
+    margin: 8px 0; /* Space between list items */
+    font-size: 15px; /* Slightly larger font for readability */
+    font-weight: 700;
+}
+
+.services-popup h1 {
+    margin: 8px 0; /* Space between list items */
+    font-size: 12px; /* Slightly larger font for readability */
+    font-weight: 600;
+    margin-left:55px;
+    margin-top:1px
+}
+
+/* Link styling inside popup */
+.services-popup li a {
+    color: #1a1a1a; /* A blue color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+    position: relative;
+    padding: 10px 10px; /* Add padding for the box shape */
+    border-radius: 3px; /* Rounded corners for a smoother look */
+    display: inline-block; 
+}
+
+.services-popup li a:hover {
+    background-color: #e7e6e6; /* Background color on hover */
+    /*color: #1a1a1b; /* Slightly darker color for the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for elevation effect */
+    transform: translateY(-2px); /* Small lift effect */
+}
+
+/* Arrow icon on hover */
+.services-popup li a::after {
+    content: '→'; /* Arrow icon */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-5px); /* Position slightly to the left */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    position: absolute;
+    top: 19px;
+    right: -25px; /* Position to the right of the text */
+    /* transform: translateY(-50%) translateX(5px); */
+    font-size: 20px; /* Match link font size */
+    font-weight: 700;
+}
+
+.services-popup li a:hover::after {
+    opacity: 1; /* Show arrow on hover */
+    transform: translateX(0); /* Move into place */
+}
+
+/* Styling for the icon span */
+.services-popup li a .material-symbols-outlined {
+    font-size: 24px;
+    margin-right: 8px; /* Space between icon and text */
+    color: rgb(90, 89, 89); /* Match icon color to text */
+    transition: color 0.3s ease;
+
+    /* Circular background styling */
+    background-color: #edf169; /* Light background color for the icon */
+    border-radius: 50%; /* Make the background circular */
+    padding: 8px; /* Add padding for the circular effect */
+    display: inline-flex; /* Align items properly */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    background:  linear-gradient(180deg, #f2f2a6, #efef61); /* Gradient for a more dynamic look */
+}
+
+.services-popup li a:hover .material-symbols-outlined {
+    color: #1a1a1b; /* Change icon color on hover */
+    /*background-color: #c1c1bf; /* Change background color on hover */
+}
+
+.blurred {
+    filter: blur(22px); /* Adjust the blur radius as needed */
+    transition: filter 0.1s ease; /* Smooth transition for the blur effect */
+}
+
+.highlight {
+    background-color: rgb(161, 161, 158); /* Style for the highlighted text */
+    /* font-weight: bold; */
+}
+
+.noResultsPopup {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 170px;
+    left: 580px;
+    transform: translate(-50%, -50%);
+    padding: 8px 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    width: 400px;
+    max-width: 350px;
+    animation: fadeIn 0.3s; /* Fade-in animation */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); Enhanced shadow for depth */
+}
+
+.noResultsPopup::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it relative to the popup */
+    top: -5px; /* Move it slightly above */
+    left: -5px; /* Move it slightly to the left */
+    right: -5px; /* Move it slightly to the right */
+    bottom: -5px; /* Move it slightly below */
+    background-color: rgba(255, 255, 255, 0.9); /* Background color */
+    border-radius: 20px; /* Make the corners even more rounded */
+    z-index: -1; /* Place it behind the popup */
+    border: 2px solid #ccc; /* Border around the pseudo-element */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Shadow effect for the border */
+}
+
+/* Create the triangle arrow using a pseudo-element */
+.arrow {
+    position: absolute; /* Positioning relative to the popup */
+    top: -10px; /* Position above the popup */
+    left: 50%; /* Center the arrow */
+    margin-left: -10px; /* Center by offsetting half the width of the arrow */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Left side transparent */
+    border-right: 10px solid transparent; /* Right side transparent */
+    border-bottom: 10px solid #f8f8f8; /* Color of the arrow matches popup background */
+}
+
+
+.noResultsPopup.show {
+    display: block; /* Show the popup */
+}
+
+.noResultsPopup.hide {
+    display: none; /* Ensure it stays hidden */
+}
+
+.noResultsPopup p {
+    font-size: 18px; /* Slightly larger font size */
+    margin: 12px 0; /* Consistent margins */
+    font-weight: 500; /* Slightly lighter font weight */
+    color: #333; /* Darker text color for readability */
+    margin-left:62px;
+}
+
+.noResultsPopup h1 {
+    font-size: 18px; /* Larger font for emphasis */
+    margin-bottom: 15px; /* Space below heading */
+    color: #838485; /* Secondary color for headings */
+    margin-left:40px;
+    font-weight: 500;
+    padding: 10px; /* Padding around the text */
+    background-color: #f8f8f8; /* Background color for the heading */
+    border-radius: 20px; /* Rounded corners for the heading */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 240px;
+    /* position: relative;  */
+}
+
+.noResultsPopup h1 {
+    border: 1px solid #ccc; /* Optional: Border for the heading */
+}
+
+.noResultsPopup .close-btn {
+    margin-top: 8px;
+    padding: 8px 8px;
+    background-color: #eae35e;
+    color: rgb(90, 89, 89);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition effect */
+    background:  linear-gradient(180deg, #f2f2a6, #efef61); /* Gradient for a more dynamic look */
+    font-size: 1rem; /* Font size */
+    font-weight: 600;
+    /* display: flex; */
+}
+
+.noResultsPopup .close-btn:hover {
+    transform: translateY(-2px); /* Move button slightly up on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth on hover */
+}
+
+.noResultsPopup .emoji {
+    font-size: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px; /* Space below emoji */
+}

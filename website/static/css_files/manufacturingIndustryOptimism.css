@@ -1,0 +1,284 @@
+.options-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #525251; */
+    background-color: #f3f2ee;
+    padding: 20px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: absolute;
+    /* background: linear-gradient(180deg, #f2f2a6, #efef61); */
+    transition: 0.1s;
+    /* 3D shadow effect */
+    /* box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.2); */
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    /* border-radius: 5px;  */
+    width:100%;
+    top: 495px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.options-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.options-bar li {
+    /* padding: 45px 40px; */
+    padding: 30px 25px;
+    margin: 5px 0;
+    /* color:  rgb(90, 89, 89); */
+    color: rgb(80, 80, 80);
+    cursor: pointer;
+    background-color: #f3f2ee;
+    /* background: linear-gradient(180deg, #f3f3c5, #f4f48b); */
+    /*background: linear-gradient(145deg, #e8e8e8, #b5b3b3);
+    /* background: linear-gradient(180deg, #d3d3d3, #808080); */
+    /* background: linear-gradient(180deg, #ADD8E6, #4c7db8); */
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 20px;  /* Curved bar effect */
+    width: 90%;  /* Adjust width as needed */
+    text-align: left;
+    /* transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px; */
+
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(255, 255, 255, 0.6); /* 3D effect shadow */
+    margin-bottom: 15px;
+    overflow: hidden; /* Keeps hover effect within bounds */
+
+}
+
+.options-bar li:hover {
+    /* transform: translateY(-2px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Add slight shadow 
+    color: #000; */
+
+    background: linear-gradient(145deg, #c9c8c8, #8c8c8c);
+    /*background: linear-gradient(145deg, #e8e99e, #f1e754); /* Lighten on hover */
+    transform: translateY(-3px); /* Lifted effect */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.5); /* Enhanced shadow on hover */
+    color: #333; /* Slightly darker text on hover */
+
+}
+
+.option-item {
+    display: flex; /* Aligns items horizontally */
+    flex-wrap: wrap; /* Ensures content wraps if needed */
+    align-items: center; /* Aligns both the link and description vertically */
+    margin-bottom: 10px; /* Adds space between options */
+    background-color: #f9f9f9; /* Light background for the container */
+    padding: 10px;
+    
+
+/* margin-bottom: 15px; /* Adds spacing between options */
+    /*overflow: hidden; /* Ensures hover effects stay within bounds */
+}
+
+.option-link {
+    display: flex; /* Makes the link container flexible */
+    align-items: center; /* Aligns content vertically */
+
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color:  rgb(90, 89, 89);
+    font-size: 25px;
+    font-weight: 800;
+
+    gap: 15px; /* Space between icon, text, and description */
+}
+
+
+.option-title {
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(80, 80, 80); /* Text color */
+    margin-bottom: 10px; /* Spacing between title and description */
+}
+
+.description-container {
+    /*margin: 0; /* Removes unnecessary margin */
+
+    background: linear-gradient(145deg, #f3f3c5, #f4f48b); /* Softer gradient matching li */
+    border-radius: 20px; /* Rounded corners to match li */
+    padding: 15px; /* Increased padding for comfortable spacing */
+    font-size: 16px; /* Adjusted for readability */
+    max-width: 35%; /* Expands to match li width */
+    box-sizing: border-box;
+    font-style: italic;
+    font-weight: 600;
+    color: rgb(80, 80, 80); /* Matching text color */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -4px -4px 8px rgba(255, 255, 255, 0.6); /* 3D shadow effect */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-top: 10px;
+    margin-left: 13px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+    flex-grow: 1;
+}
+
+.description-container:hover {
+/* background: linear-gradient(145deg, #e8e99e, #f1e754); /* Lighter hover effect */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.5); /* Enhanced shadow on hover */
+}
+
+.option-item a .material-symbols-outlined {
+    font-size: 36px; /* Size of the icon */
+    /* color: #333; Icon color */
+    /* font-size: 24px; */
+    margin-right: 13px; /* Space between icon and text */
+    color: rgb(90, 89, 89); /* Match icon color to text */
+    transition: color 0.3s ease;
+
+    /* Circular background styling */
+    background-color: #edf169; /* Light background color for the icon */
+    border-radius: 50%; /* Make the background circular */
+    padding: 8px; /* Add padding for the circular effect */
+    display: inline-flex; /* Align items properly */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    background:  linear-gradient(180deg, #f2f2a6, #efef61);
+    /* background: linear-gradient(180deg, #f3f3c5, #f4f48b) */
+}
+
+/* Main content */
+/* .main-content {
+    flex-grow: 1;
+    margin-top: 200px;
+    /* margin-top: 80px; */
+    /* padding: 0; */
+    /* transition: margin-left 0.3s ease; Smoothly shifts with side panel */
+    /* position: fixed; */
+/* }  */
+
+/* Main content when side panel is closed */
+/* .main-content.expanded {
+    margin-top: 700px;
+    /* margin-left: 0; 
+} */
+
+.image-container {
+    text-align: center; /* Center the image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Image Style */
+.intro-image {
+    width: 100%; /* Makes the image span the full width */
+    max-width: 95%; /* Optional: limit the image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Optional: rounded corners */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Optional: subtle shadow */
+    position: absolute; /* Position absolute to fill the parent */
+    top: 95px;
+    left: 35px;
+    right: 9px;
+    bottom: 80px;
+    height: 50%;
+    object-fit: fill; /* Cover the entire area */
+    z-index: 1; /* Send to back */
+
+/* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth hover */
+    /*transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}
+
+/* .intro-image:hover {
+    transform: scale(1.02); /* Slight zoom-in on hover
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Deepened shadow for depth 
+    filter: brightness(1.05) contrast(1.05); /* Enhance brightness and contrast slightly 
+} */
+
+/* Additional container styling for a more realistic background effect */
+.image-container {
+    padding: 15px; /* Add space around the image */
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Subtle gradient background */
+    border-radius: 25px; /* Rounded corners to match the image */
+    box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.1), /* Inner light for depth */
+                0 8px 18px rgba(0, 0, 0, 0.15); /* Soft outer shadow */
+}
+
+.production-schedule-gif {
+    width: 35%; /* Set the width of the image */
+    height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: text-bottom; /* Align the image with the text */
+    margin-left: 115px; /* Space between text and image */
+    /*display: inline-block; /* Ensure it displays inline with the text */
+
+    /* position: absolute; 
+    top: 220px;
+    left: 0;
+    right: 0;  */
+    margin-bottom:2px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 100%; /* Smooth rounded corners */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effect */
+}
+
+.image-container h1 {
+    /*font-family: 'Cinzel', serif; /* Elegant, creative font */
+    font-family: 'Playfair Display', serif;
+    /*font-family: 'Bebas Neue', sans-serif; */
+    font-size: 52px; /* Large, bold font size */
+    font-weight: 700; /* Extra bold for prominence */
+    color: transparent; /* Dark, neutral text color */
+    text-align: center; /* Center-align the heading */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 4px; /* Adds spacing between letters */
+    margin: 0; /* Adds spacing above and below the heading */
+    /* background: linear-gradient(90deg, #f3c623, #f3e523); /* Gradient for stylish look */
+    background: linear-gradient(180deg, #484848,#929290);
+    -webkit-background-clip: text; /* Clips background to text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+    /*text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for depth */
+    /*text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.7); /* Downward shadow only */
+    /*text-shadow: 0px 12px 20px rgba(0, 0, 0, 0.6);*/
+    position: absolute; /* Positions it over the image */
+    top: 56%; /* Adjusts the vertical position */
+    left: 69%; /* Centers it horizontally */
+    transform: translate(-50%, -50%); /* Aligns the center */
+    z-index: 2; /* Ensures it's above the image */
+    /*animation: glow-effect 3s infinite; /* Adds a glowing effect */
+
+    /* Realistic shadow with slight left direction */
+    text-shadow: 
+        -2px 4px 2px rgba(0, 0, 0, 0.2),  /* Base shadow, slightly left and down */
+        -4px 8px 8px rgba(0, 0, 0, 0.15), /* Larger shadow further left and down */
+        -6px 12px 16px rgba(0, 0, 0, 0.1); /* Faint distant shadow */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+/* Glowing animation */
+@keyframes glow-effect {
+    0% {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(243, 239, 187, 0.8);
+    }
+    100% {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(255, 255, 255, 0.6);
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_files/utility_styles.css') }}"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_files/productionScheduling.css') }}">
+    
+    <title>Production Optimization - Linear problem</title>
+    <style>
+
+        /* Main content */
+        /* .main-content {
+            flex-grow: 1;
+            margin-top: 200px;  /* Adjusted with JavaScript */
+            /* padding: 0; */
+            /* transition: margin-left 0.3s ease; Smoothly shifts with side panel */
+        /* } */
+       
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Panel-->
+    <div class="top-panel">
+        <img src="{{ url_for('static', filename='images_gif/logo-copi.png') }}" alt="Logo" class="logo"> <!-- Logo Image -->
+        <form class="search-form">
+            <span class="material-icons search-icon">search</span>
+            <input type="text" placeholder=" " class="search-bar">
+            <!-- <input type="text" placeholder="Search..." class="search-bar"> -->
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+
+     <!-- Side Panel -->
+     <div class="side-panel" id="sidePanel">
+        <div class="links-container"> 
+            <a href="/" id="homeLink">   <!--add the route as per you add in python file for flask-->
+                <span class="material-symbols-outlined">home</span> Home
+            </a>
+            <a href="#" id="servicesLink">
+                <span class="material-symbols-outlined">linked_services</span> Services
+            </a>
+        </div>
+    </div>
+
+    <button class="menu-button" id="menuButton" onclick="togglePanel()">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
+
+    <div class="services-popup" id="servicesPopup">
+        <h3>Production and Price Planning</h3>
+        <ul>
+            <li><a href="/manufacturing-industry-optimism">
+                <span class="material-symbols-outlined">production_quantity_limits</span> Optimistic Manufacturing Industry 
+                <h1>Budget-Savvy Profit Maximize</h1> </a></li>
+            <li><a href="#">
+                <span class="material-symbols-outlined">price_change</span> Optimistic Hospitality Industry (Hotels, Resorts)
+                <h1>Maximize Revenue with Dynamic Pricing</h1> </a></li>
+            <!-- <li><a href="service3.html">Service 3</a></li> -->
+        </ul>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script_files/utility_scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='script_files/productionScheduling.js') }}"></script>
+
+</body>
+</html>
