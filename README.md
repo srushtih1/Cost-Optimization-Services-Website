@@ -5,6 +5,7 @@ Designed and developed a seamless, user-centric website UX using CSS, HTML, and 
 Utilized Flask(Pythpn) to create a robust and scalable backend, ensuring seamless integration with the frontend.
 
 ✔ Incorporated vibrant yellow-themed UI elements to evoke optimism and trust, enhancing user engagement and brand perception.
+
 ✔ Integrated dynamic GIFs and animations to visually represent active processes and optimized, faster results, creating an intuitive and responsive user experience.
 
 
