@@ -8,10 +8,10 @@ Designed and developed a seamless, user-centric website UX using CSS, HTML, and 
 
 
 SCREENSHOTS -
-![Home Page part 1](<Website UX 1.png>)
-![Home Page part 2](<Website UX 2.png>)
-![Options Tab with popup](<Website UX 3.png>)
-![Manufacturing Industry Page part 1](<Website UX 4.png>)
-![Manufacturing Industry Page part 2](<Website UX 5.png>)
-![Search Bar with no results popup alert](<Website UX 6.png>)
-![Search bar with text found highlighted](<Website UX 7.png>)
+![Home Page part 1](<UX_Screenshots/Website UX 1.png>)
+![Home Page part 2](<UX_Screenshots/Website UX 2.png>)
+![Options Tab with popup](<UX_Screenshots/Website UX 3.png>)
+![Manufacturing Industry Page part 1](<UX_Screenshots/Website UX 4.png>)
+![Manufacturing Industry Page part 2](<UX_Screenshots/Website UX 5.png>)
+![Search Bar with no results popup alert](<UX_Screenshots/Website UX 6.png>)
+![Search bar with text found highlighted](<UX_Screenshots/Website UX 7.png>)
