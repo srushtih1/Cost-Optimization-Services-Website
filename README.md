@@ -1,6 +1,13 @@
 # Cost-Optimization-Services-Website
 AI-driven procurement solutions designed to optimize costs, streamline operations, and boost profitability across industries.
 
+Designed and developed a seamless, user-centric website UX using CSS, HTML, and JavaScript, integrating Flask (Python) for a robust and scalable backend.
+
+✔ Incorporated vibrant yellow-themed UI elements to evoke optimism and trust, enhancing user engagement and brand perception.
+✔ Integrated dynamic GIFs and animations to visually represent active processes and optimized, faster results, creating an intuitive and responsive user experience.
+
+
+SCREENSHOTS -
 ![Home Page part 1](<Website UX 1.png>)
 ![Home Page part 2](<Website UX 2.png>)
 ![Options Tab with popup](<Website UX 3.png>)
